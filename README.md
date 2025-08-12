@@ -22,15 +22,33 @@ A modelagem preditiva e a aplicação de técnicas de machine learning serão re
 - Clientes classificados como **SeniorCitizen** apresentam maior propensão à evasão.  
 - Valores mensais mais altos pagos tendem a estar associados a maior churn, apontando para potenciais desafios na precificação ou percepção de valor.
 
-  ### Distribuição de Churn (evasão vs permanência
-  ![Distribuição de Churn]()
+---
 
+  ### Distribuição de Churn (evasão vs permanência)
+  ![Distribuição de Churn](visualizations/taxa_churn.png)
+
+  ---
+  ### Churn por Tipo de Contrato
+  ![Distribuição por tipo contrato](visualizations/churn_tipo_contrato.png)
+
+  ---
+  ### Boxplot de Churn por Tempo de contrato (Tenure)
+   ![boxplot de Churn](visualizations/churn_tenure.png)
+
+  ---
+  ### Heatmap Matriz de Correlação (Pearson)
+  ![matriz de correlação](visualizations/matriz_corr.png)
+  
+ ---  
+ ### Tabela de correlação de variáveis
+![Distribuição de Churn](visualizations/tabela_corr.png)
+ 
 ## Metodologia e Etapas Desenvolvidas  
 1. **Importação e limpeza dos dados:** tratamento de dados inconsistentes, padronização de categorias e criação de variáveis derivadas (ex.: cobrança diária).  
 2. **Análise exploratória e estatística:** análise descritiva, testes estatísticos (Qui-quadrado, V de Cramer), análise de correlações e visualizações para validar relações entre variáveis e churn.  
 3. **Preparação para modelagem:** tratamento inicial das variáveis categóricas (substituição de valores específicos) e criação da variável alvo binária para churn.  
 
 ## Próximos Passos  
-- A modelagem preditiva será conduzida em um repositório separado, onde técnicas de machine learning serão aplicadas para previsão do churn e avaliação dos modelos.  
+A modelagem preditiva será conduzida em um repositório separado, onde técnicas de machine learning serão aplicadas para previsão do churn e avaliação dos modelos.  
 
 
