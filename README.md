@@ -112,6 +112,6 @@ Por exemplo, variáveis como Contract, InternetService, PaymentMethod, Paperless
 
 
 ## ⚙️ Próximos Passos  
-A modelagem preditiva será conduzida em um repositório separado, onde técnicas de machine learning serão aplicadas para previsão do churn e avaliação dos modelos.  
+A modelagem preditiva será conduzida em um repositório separado, onde técnicas de machine learning serão aplicadas para previsão do churn e avaliação dos modelos com base nos dados que foram tratados até aqui.
 
 
