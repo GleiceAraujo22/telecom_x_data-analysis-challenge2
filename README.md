@@ -68,8 +68,48 @@ O histograma mostra que a  distribuição é assimétrica a direita ou seja, mui
  
 ![Distribuição de Churn](visualizations/tabela_corr.png) 
 
-Com relação a correlação entre as variáveis independentes, (Charges.Monthly) e (Charges.Total) possuem correlação positiva quase perfeita ≈99 o que indica que são praticamente a mesma coisa por isso para evitar a multicolinearidade no modelo de machine learning, seria interessante avaliar neste caso, a exclusão de uma dessas variáveis para reduzir a multicolinearidade. Essa análise será realizada de forma mais profunda na parte 2 deste projeto.
- 
+Com relação a correlação entre as variáveis independentes, (Charges.Monthly) e (Charges.Total) possuem correlação positiva quase perfeita ≈99 o que indica que são praticamente a mesma coisa por isso para evitar a multicolinearidade no modelo de machine learning, seria interessante avaliar neste caso, a exclusão de uma dessas variáveis para reduzir a multicolinearidade. Essa análise será realizada de forma mais profunda na parte 2 deste projeto. 
+
+### 7. Avaliação de associação entre variáveis categóricas 
+Foi aplicado um teste estatístico qui-quadrado (χ²) para medir a associação entre as variáveis categóricas em relação a variável alvo (churn) onde: 
+
+
+
+    Qui-quadrado → mede a discrepância entre as frequências observadas e as esperadas.
+
+    p-valor → indica se a associação com o Churn é estatisticamente significativa (quanto menor, mais forte a evidência de associação).
+
+    V de Cramér → mede a força da associação (0 a 1), sendo:
+
+     0.00 a 0.10 → associação fraca ou desprezível
+
+     0.10 a 0.30 → associação moderada
+
+     0.30 → associação forte
+
+
+
+| Variável          | Qui-quadrado | p-valor            | V de Cramer |
+|-------------------|--------------|--------------------|-------------|
+| Contract          | 1184.596572  | 5.863038e-258      | 0.409798    |
+| InternetService   | 732.309590   | 9.571788e-160      | 0.322037    |
+| PaymentMethod     | 648.142327   | 3.682355e-140      | 0.302677    |
+| PaperlessBilling  | 258.277649   | 4.073355e-58       | 0.191141    |
+| OnlineSecurity    | 205.633104   | 1.232098e-46       | 0.170467    |
+| TechSupport       | 190.166842   | 2.923567e-43       | 0.163898    |
+| Dependents        | 189.129249   | 4.924922e-43       | 0.163448    |
+| Partner           | 158.733382   | 2.139911e-36       | 0.149663    |
+| OnlineBackup      | 47.260854    | 6.214093e-12       | 0.081051    |
+| DeviceProtection  | 30.513395    | 3.315693e-08       | 0.064738    |
+| StreamingTV       | 27.862522    | 1.302484e-07       | 0.061762    |
+| StreamingMovies   | 26.251336    | 2.997474e-07       | 0.059882    |
+| MultipleLines     | 11.330441    | 3.464383e-03       | 0.036400    |
+| PhoneService      | 0.915033     | 3.387825e-01       | 0.000000    |
+| gender            | 0.484083     | 4.865787e-01       | 0.000000    |
+
+Podemos observar com os resultados dos testes Qui-quadrado e V de Cramér as relações estatísticamente significativas( onde o p < 0.05), além da força das relaçoes de algumas variáveis com relação ao churn.
+Por exemplo, variáveis como Contract, InternetService, PaymentMethod, PaperlessBilling, OnlineSecurity, TechSupport, Dependents, Partner mostram forte evidência de associação com o churn de clientes. Algumas dessas associações já haviamos percebido anteriormente como é o caso da variável Contract onde clientes que possuem contratos mensais tendem a abandonar mais o serviço comparado a clientes cujo o contrato é anual ou bienal. 
+
 
 ## ⚙️ Próximos Passos  
 A modelagem preditiva será conduzida em um repositório separado, onde técnicas de machine learning serão aplicadas para previsão do churn e avaliação dos modelos.  
