@@ -107,8 +107,8 @@ Foi aplicado um teste estatístico qui-quadrado (χ²) para medir a associação
 | PhoneService      | 0.915033     | 3.387825e-01       | 0.000000    |
 | gender            | 0.484083     | 4.865787e-01       | 0.000000    |
 
-Podemos observar com os resultados dos testes Qui-quadrado e V de Cramér as relações estatísticamente significativas( onde o p < 0.05), além da força das relaçoes de algumas variáveis com relação ao churn.
-Por exemplo, variáveis como Contract, InternetService, PaymentMethod, PaperlessBilling, OnlineSecurity, TechSupport, Dependents, Partner mostram forte evidência de associação com o churn de clientes. Algumas dessas associações já haviamos percebido anteriormente como é o caso da variável Contract onde clientes que possuem contratos mensais tendem a abandonar mais o serviço comparado a clientes cujo o contrato é anual ou bienal. 
+Podemos observar com os resultados dos testes Qui-quadrado e V de Cramér as relações estatísticamente significativas( onde o p < 0.05), além da força das relações de algumas variáveis com relação ao churn.
+Por exemplo, variáveis como **Contract**, **InternetService** e **PaymentMethod** mostram forte evidência de associação com o churn de clientes e com associação moderada a forte que pode ser considerada. Algumas dessas associações já haviamos percebido anteriormente como é o caso da variável Contract onde clientes que possuem contratos mensais tendem a abandonar mais o serviço comparado a clientes cujo o contrato é anual ou bienal. 
 
 
 ## ⚙️ Próximos Passos  
